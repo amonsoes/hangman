@@ -18,4 +18,7 @@ def get_words():
 
 
 def enum_word(word):
-    return {num: char for num, char in enumerate(word)}
+    return {num: char for num, char in enumerate(word.lower())}
+
+def display_word(word):
+    return {num: "_" for num, i in enumerate(enum_word(word).keys())}
