@@ -1,6 +1,7 @@
 import random
 import word_processing
 import string
+import pygame
 
 words = word_processing.get_words()
 
