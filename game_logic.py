@@ -47,5 +47,5 @@ def game():
                 print("Guesses left: ",guesses)
         print(display_word.values())
 
-
-start_game()
+if __name__ == "__main__":
+    start_game()
