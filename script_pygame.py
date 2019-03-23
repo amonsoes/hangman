@@ -11,12 +11,12 @@ def headline(x,y,text,font):
     return window.blit(textSurf,textRect)
 
 
-def make_button(target,x_window,y_window,x,y,text,font=pygame.font.Font("freesansbold.ttf",20),color=(0,0,0),hovercolor=(0,0,0)):
+def make_button(x_window,y_window,x,y,text,font=pygame.font.Font("freesansbold.ttf",20),color=(0,0,0),hovercolor=(0,0,0)):
     if x_window + x > mouse[0] > x_window and y_window + y > mouse[1] > y_window:
         pygame.draw.rect(window, hovercolor, (x_window, y_window, x, y))
         if click[0] == 1:
             pygame.draw.rect(window, color, (x_window, y_window, x, y))
-            target
+            game_logic.start_game()
 
     else:
         pygame.draw.rect(window, color, (x_window,y_window,x,y))
@@ -58,7 +58,7 @@ while run:
     headline(500,200,"Welcome to Hangman",headline_font)
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
-    make_button(0,450,400,100,50,"Start",small_font,red,light_red)
+    make_button(450,400,100,50,"Start",small_font,red,light_red)
     #_________________
 
 
