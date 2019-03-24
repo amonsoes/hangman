@@ -2,6 +2,7 @@ import pygame
 import random
 import game_logic
 import word_processing
+import time
 
 pygame.init()
 window = pygame.display.set_mode((1000, 800))
@@ -26,6 +27,7 @@ display_word = word_processing.display_word(random_word)
 run = True
 start = True
 main = True
+win = False
 
 
 print(random_word,enumerated_word,display_word)
@@ -62,10 +64,14 @@ def text_render(text,font,x,y):
 
 
 def game():
+    global main
+    global win
     global display_word
     global run
     guesses = 8
     while guesses != 0:
+        if win:
+            break
         eventhandler()
         window.fill(blue)
         text_render(" ".join(display_word.values()), headline_font, 500, 700)
@@ -77,13 +83,24 @@ def game():
                 text_render("no digits and other funny stuff, obviously...",small_font,500,100)
                 guesses -= 1
             else:
-                if event.type == pygame.KEYDOWN and event.key in [i for i in range(97,122)]:
+                if " ".join(display_word.values()) == " ".join(enumerated_word.values()):
+                    win = True
+                elif event.type == pygame.KEYDOWN and event.key in [i for i in range(97,122)]:
                     if chr(event.key) in enumerated_word.values():
                         for index, char in enumerated_word.items():
                             if event.key == ord(char):
                                 display_word[index] = char
                     elif chr(event.key) not in enumerated_word.values():
                         guesses -= 1
+    window.fill(blue)
+    if win == True:
+        text_render("You won!", headline_font, 500, 400)
+        main = False
+    else:
+        text_render("You lost!", headline_font, 500, 400)
+        main = False
+    pygame.display.update()
+
 
 
 def eventhandler():
@@ -120,7 +137,7 @@ while run:
 
     #__________________
 
-    print("run loop")
+
     pygame.display.update()
 
 pygame.quit()
