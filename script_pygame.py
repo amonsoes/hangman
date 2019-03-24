@@ -2,6 +2,7 @@ import pygame
 import random
 import game_logic
 import word_processing
+import os
 import time
 
 pygame.init()
@@ -23,15 +24,24 @@ random_word = words[random.randint(0, len(words))]
 enumerated_word = word_processing.enum_word(random_word)
 display_word = word_processing.display_word(random_word)
 
+print(random_word,enumerated_word,display_word)
+
 
 run = True
 start = True
 main = True
 win = False
 
+#todo load images correctly
 
+########
 
-print(random_word,enumerated_word,display_word)
+def load_images(path):
+    for dir,root,file in os.walk(path):
+        if file.endswith(".png"):
+            pygame.image.load(os.path.join(file))
+
+########
 
 
 def headline(x, y, text, font):
