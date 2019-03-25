@@ -2,17 +2,25 @@ import pygame
 import random
 import game_logic
 import word_processing
+import load
 import os
 import time
 
 pygame.init()
-window = pygame.display.set_mode((1000, 800))
+
+display_width = 1000
+display_height = 800
+window = pygame.display.set_mode((display_width, display_height))
 
 black = (0, 0, 0)
 red = (255, 130, 130)
 light_red = (255, 200, 200)
 blue = (130, 180, 255)
 white = (255, 255, 255)
+
+images = load.from_dir(".")
+
+image_generator = load.image_generator(images,window,350,200)
 
 headline_font = pygame.font.Font("freesansbold.ttf",50)
 small_font = pygame.font.Font("freesansbold.ttf",20)
@@ -32,16 +40,6 @@ start = True
 main = True
 win = False
 
-#todo load images correctly
-
-########
-
-def load_images(path):
-    for dir,root,file in os.walk(path):
-        if file.endswith(".png"):
-            pygame.image.load(os.path.join(file))
-
-########
 
 
 def headline(x, y, text, font):
@@ -93,6 +91,7 @@ def game():
             if event.type == pygame.KEYDOWN and event.key not in [i for i in range(97,122)]:
                 text_render("no digits and other funny stuff, obviously...",small_font,500,100)
                 guesses -= 1
+                next(image_generator)
             else:
                 if " ".join(display_word.values()) == " ".join(enumerated_word.values()):
                     win = True
@@ -103,6 +102,7 @@ def game():
                                 display_word[index] = char
                     elif chr(event.key) not in enumerated_word.values():
                         guesses -= 1
+                        next(image_generator)
     window.fill(blue)
     if win == True:
         text_render("You won!", headline_font, 500, 400)

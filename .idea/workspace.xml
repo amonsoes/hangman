@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a52a7ec-9e02-4f4f-b052-27a92f717bcf" name="Default Changelist" comment="op">
-      <change beforePath="$PROJECT_DIR$/script_pygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/script_pygame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hangman.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hangman.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,36 +51,70 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="451236569">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="229" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="229" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game_logic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
+            <state relative-caret-position="495">
               <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="35" selection-end-column="21" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1553365958178" expanded="true" signature="302:303" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_pygame.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script_pygame.py">
+        <entry file="file://$PROJECT_DIR$/load.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="135">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
-                <marker date="1553454166149" expanded="true" signature="788:923" ph="..." />
-                <marker date="1553454166149" expanded="true" signature="924:925" ph="..." />
-                <marker date="1553454166149" expanded="true" signature="956:1080" ph="..." />
-                <marker date="1553454166149" expanded="true" signature="1232:1658" ph="..." />
-                <marker date="1553454166149" expanded="true" signature="1658:1661" ph="..." />
-                <marker date="1553454166149" expanded="true" signature="1689:3650" ph="..." />
-                <marker date="1553454166149" expanded="true" signature="1817:1938" ph="..." />
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1553532451424" expanded="true" signature="60:65" ph="..." />
               </folding>
             </state>
           </provider>
@@ -109,10 +146,11 @@
         <option value="$PROJECT_DIR$/word_processing.py" />
         <option value="$PROJECT_DIR$/game_logic.py" />
         <option value="$PROJECT_DIR$/script_pygame.py" />
+        <option value="$PROJECT_DIR$/load.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1432" />
     <option name="height" value="930" />
@@ -138,6 +176,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -242,15 +281,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1432" height="930" extended-state="0" />
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24379872" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13741064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293556" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32919708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -262,6 +301,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -271,6 +312,16 @@
     <entry file="file://$PROJECT_DIR$/word_processing" />
     <entry file="file://$PROJECT_DIR$/game_logic" />
     <entry file="file://$PROJECT_DIR$/main.py" />
+    <entry file="file://$PROJECT_DIR$/game_logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/word_processing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -281,30 +332,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_logic.py">
+    <entry file="file://$PROJECT_DIR$/script_pygame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="35" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1553365958178" expanded="true" signature="302:303" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script_pygame.py">
+    <entry file="file://$PROJECT_DIR$/load.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1553454166149" expanded="true" signature="788:923" ph="..." />
-            <marker date="1553454166149" expanded="true" signature="924:925" ph="..." />
-            <marker date="1553454166149" expanded="true" signature="956:1080" ph="..." />
-            <marker date="1553454166149" expanded="true" signature="1232:1658" ph="..." />
-            <marker date="1553454166149" expanded="true" signature="1658:1661" ph="..." />
-            <marker date="1553454166149" expanded="true" signature="1689:3650" ph="..." />
-            <marker date="1553454166149" expanded="true" signature="1817:1938" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1553532451424" expanded="true" signature="60:65" ph="..." />
           </folding>
         </state>
       </provider>
