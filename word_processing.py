@@ -3,7 +3,12 @@ from nltk.corpus import gutenberg
 
 
 def check_pos(lst):
-    return [word for word,pos in nltk.pos_tag(lst) if pos.startswith("N")]
+    nouns = [word for word,pos in nltk.pos_tag(lst) if pos.startswith("N")]
+    final = []
+    for word,tag in nltk.pos_tag(nouns):
+        if tag != "NNP" and tag != "NNPS":
+            final.append(word)
+    return final
 
 
 def get_words():

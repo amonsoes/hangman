@@ -1,10 +1,7 @@
 import pygame
 import random
-import game_logic
 import word_processing
 import load
-import os
-import time
 
 pygame.init()
 
@@ -37,12 +34,14 @@ end = True
 
 
 def headline(x, y, text, font):
+
     textSurf, textRect = text_objects(text, font)
     textRect.center = (x, y)
     return window.blit(textSurf, textRect)
 
 
 def start_button(x_window, y_window, x, y, text, font, color, hovercolor,):
+
     global start
     if x_window + x > mouse[0] > x_window and y_window + y > mouse[1] > y_window:
         pygame.draw.rect(window, hovercolor, (x_window, y_window, x, y))
@@ -56,12 +55,11 @@ def start_button(x_window, y_window, x, y, text, font, color, hovercolor,):
 
 
 def end_button(x_window, y_window, x, y, text, font, color, hovercolor):
-    global main
+
     if x_window + x > mouse[0] > x_window and y_window + y > mouse[1] > y_window:
         pygame.draw.rect(window, hovercolor, (x_window, y_window, x, y))
         if click[0] == 1:
             pygame.draw.rect(window, color, (x_window, y_window, x, y))
-            main = True
             game()
     else:
         pygame.draw.rect(window, color, (x_window, y_window, x, y))
@@ -70,26 +68,23 @@ def end_button(x_window, y_window, x, y, text, font, color, hovercolor):
 
 
 def text_objects(text,font):
+
     textSurface = font.render(text,True,black)
     return textSurface, textSurface.get_rect()
 
 
 def text_render(text,font,x,y):
+
     textSurf,textRect = text_objects(text,font)
     textRect.center = (x,y)
     return window.blit(textSurf,textRect)
-
-def play_again():
-    pass
-
 
 
 def game():
 
     global main
     global win
-    global display_word
-    global run
+
     window.fill(blue)
     guesses = 7
     random_word = words[random.randint(0, len(words))]
@@ -142,6 +137,7 @@ def game():
 
     else:
         text_render("You lost!", headline_font, 500, 650)
+        text_render("The word was {}".format(random_word), headline_font, 500, 200)
         load.blit_image(image_dict[guesses], window, 350, 200)
         main = False
 
@@ -149,6 +145,7 @@ def game():
 
 
 def eventhandler():
+
     global run
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -161,6 +158,7 @@ while run:
     # ______start______
 
     while start:
+
         eventhandler()
         window.fill(blue)
         mouse = pygame.mouse.get_pos()
@@ -174,6 +172,7 @@ while run:
     #_______main______
 
     while main:
+
         eventhandler()
         game()
         pygame.display.update()
@@ -181,10 +180,12 @@ while run:
     #__________________
 
     #______end_________
-
+    eventhandler()
+    pygame.display.update()
+    pygame.time.wait(1500)
     while end:
+
         eventhandler()
-        pygame.time.wait(1500)
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
         text_render("Do you want to play again?", headline_font, 500, 700)
