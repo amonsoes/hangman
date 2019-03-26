@@ -2,6 +2,7 @@ import pygame
 import random
 import word_processing
 import load
+from sys import exit
 
 pygame.init()
 
@@ -43,6 +44,7 @@ def headline(x, y, text, font):
 def start_button(x_window, y_window, x, y, text, font, color, hovercolor,):
 
     global start
+
     if x_window + x > mouse[0] > x_window and y_window + y > mouse[1] > y_window:
         pygame.draw.rect(window, hovercolor, (x_window, y_window, x, y))
         if click[0] == 1:
@@ -56,10 +58,15 @@ def start_button(x_window, y_window, x, y, text, font, color, hovercolor,):
 
 def end_button(x_window, y_window, x, y, text, font, color, hovercolor):
 
+    global main
+    global win
+
     if x_window + x > mouse[0] > x_window and y_window + y > mouse[1] > y_window:
         pygame.draw.rect(window, hovercolor, (x_window, y_window, x, y))
         if click[0] == 1:
             pygame.draw.rect(window, color, (x_window, y_window, x, y))
+            main = True
+            win = False
             game()
     else:
         pygame.draw.rect(window, color, (x_window, y_window, x, y))
@@ -104,6 +111,7 @@ def game():
 
         if guesses != 7:
             load.blit_image(image_dict[guesses], window, 350, 200)
+
         for event in pygame.event.get():
 
             if event.type == pygame.KEYDOWN and event.key not in [i for i in range(97,123)]:
@@ -127,6 +135,11 @@ def game():
                     elif chr(event.key) not in enumerated_word.values():
                         guesses -= 1
                         load.blit_image(image_dict[guesses], window, 350, 200)
+
+                elif event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+
     window.fill(blue)
     pygame.display.update()
 
@@ -147,13 +160,21 @@ def game():
 def eventhandler():
 
     global run
+    global main
+    global end
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
+            main = False
+            end = False
+            pygame.quit()
+            exit()
 
 
 while run:
     eventhandler()
+    pygame.mixer.init()
+
 
     # ______start______
 
@@ -183,6 +204,7 @@ while run:
     eventhandler()
     pygame.display.update()
     pygame.time.wait(1500)
+
     while end:
 
         eventhandler()
