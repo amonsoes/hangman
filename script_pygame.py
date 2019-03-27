@@ -174,6 +174,8 @@ def eventhandler():
 while run:
     eventhandler()
     pygame.mixer.init()
+    pygame.mixer.music.load("./music.ogg")
+    pygame.mixer.music.play(50)
 
 
     # ______start______
